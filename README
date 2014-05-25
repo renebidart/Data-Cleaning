@@ -1,0 +1,11 @@
+First all the relevant files are read in. Then the X train and test data is joined together, using the features data set as names. Then subject and activity files are combined for both test and train, and labelled. 
+
+A for loop hardcoded with the acticity names is used to change the numeric labels into the more useful descriptions. 
+
+Then grepl function is used to check which variable names contain std or mean, and then any other columns are removed. The first two columns are also added to the data set.
+
+gsub is used to change the names to lowercase and remove unwanted symbols.
+
+The data is then melted by subject and activity, with the output going into suballmelt.
+
+Finally the averages are calculated using dcast, and put into a set called dfinal data.
